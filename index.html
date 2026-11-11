@@ -7,6 +7,8 @@
   <meta name="description" content="Explore NASA's Astronomy Picture of the Day archive with a beautiful date-based space gallery.">
   <title>NASA Space Explorer | Astronomy Picture of the Day</title>
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +23,18 @@
       </a>
       <a class="header-link" href="https://science.nasa.gov/apod/" target="_blank" rel="noopener noreferrer">NASA APOD <span aria-hidden="true">↗</span></a>
     </header>
+
+    <section class="pwa-controls" aria-label="Install and offline app controls">
+      <div class="pwa-controls-text">
+        <div class="pwa-title">SPACE EXPLORER APP</div>
+        <div class="connection-status" id="connectionStatus" role="status" aria-live="polite"><span class="connection-dot" aria-hidden="true"></span><span id="connectionText">Checking connection…</span></div>
+      </div>
+      <div class="pwa-actions">
+        <button type="button" class="pwa-button install-button" id="installAppButton">↓ Install App</button>
+        <button type="button" class="pwa-button notification-button" id="notificationsButton">♧ Enable Notifications</button>
+      </div>
+      <p id="pwaMessage" class="pwa-message" role="status" aria-live="polite" hidden></p>
+    </section>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
@@ -71,5 +85,6 @@
   </div>
   <script src="js/dateRange.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/pwa.js"></script>
 </body>
 </html>
